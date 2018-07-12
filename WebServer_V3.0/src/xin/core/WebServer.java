@@ -6,7 +6,7 @@ import java.net.Socket;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-import xin.comman.ServletContext;
+import xin.common.ServletContext;
 
 /**
  * 核心类，用来启动服务器
@@ -41,6 +41,5 @@ public class WebServer {
 	public static void main(String[] args) {
 		WebServer server = new WebServer();
 		server.start();
-		
 	}
 }
