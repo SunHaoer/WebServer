@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+提取服务器的参数
+端口号：8080
+线程池大小：100
+服务器遵循协议：Http/1.1
+服务器资源根目录：WebContent
+ -->
+ 
+ <server>
+ 	<service>
+ 		<connector port="8080" maxThread="100" protocol="HTTP/1.1"></connector>
+ 		<webRoot>WebContent</webRoot>
+ 	</service>
+ </server>
