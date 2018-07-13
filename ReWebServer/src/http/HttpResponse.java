@@ -3,6 +3,8 @@ package http;
 import java.io.OutputStream;
 import java.io.PrintStream;
 
+import common.HttpContext;
+
 /**
  * 封装响应信息
  * @author Administrator
@@ -24,7 +26,7 @@ public class HttpResponse {
 	public OutputStream getOutputStream() {		// 发送响应头
 		if(isSend == false) {
 			PrintStream ps = new PrintStream(outputStream);
-			ps.println(protocol + " " + status + " " + "OK"); 		// 拼接状态行
+			ps.println(protocol + " " + status + " " + HttpContext.DESC_OK); 		// 拼接状态行
 			ps.println("Content-Type:" + contentType);			// 拼接响应头
 			ps.println("Content-Length" + contentLength); 		// 拼接响应头, 数据长度
 			ps.println(); 			// 空白行
